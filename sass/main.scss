@@ -1,3 +1,25 @@
+// BASE
 @import "./base/common";
 @import "./base/container";
+
+// UTILS
 @import "./utils/visually-hidden";
+@import "./utils/variables";
+
+// COMPONENTS
+@import "./components/modal-btn";
+@import "./components/backdrop";
+@import "./components/modal-btn-send";
+@import "./components/modal-form";
+@import "./components/modal-form-btn";
+
+// LAYOUT
+@import "./layout/header";
+@import "./layout/hero";
+@import "./layout/features";
+@import "./layout/duties";
+@import "./layout/crew";
+@import "./layout/customer";
+@import "./layout/social-web";
+@import "./layout/footer";
+@import "./layout/email-sub";
