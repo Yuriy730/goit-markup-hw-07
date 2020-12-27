@@ -488,8 +488,8 @@ img {
   fill: var(--accent-color);
   border-color: var(--accent-color);
 }
-.customer__icon:hover,
-.customer__icon:focus {
+.customers__icon:hover,
+.customers__icon:focus {
   fill: var(--accent-color);
 }
 
@@ -895,6 +895,7 @@ img {
   background-image: url(../images/images-hw-04/icon-check.png);
   border: transparent;
 }
+
 .policy-agreement::before {
   content: "";
   width: 16px;
