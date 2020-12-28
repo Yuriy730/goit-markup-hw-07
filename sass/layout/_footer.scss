@@ -1,0 +1,60 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--primery-background-color);
+}
+.tube {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.container-tube {
+  margin-right: 70px;
+}
+.address-tube {
+  margin-top: 20px;
+}
+.tube .logo-tube {
+  display: flex;
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.192;
+  letter-spacing: 0.03em;
+  color: var(--primery-white-color);
+  text-decoration: none;
+}
+.address-mail-item {
+  margin-bottom: 9px;
+  color: var(--primery-white-color);
+}
+
+.address-tube .location {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  margin-bottom: 9px;
+  font-weight: 400;
+  color: var(--primery-white-color);
+}
+.address-tube .address-tel-unit,
+.address-tube .address-mail-unit {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.143px;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  transition: 250ms var(--timing-function);
+  text-decoration: none;
+}
+.address-tube .address-mail-unit:hover,
+.address-tube .address-mail-unit:focus {
+  color: var(--accent-color);
+}
+
+.address-tube .address-tel-unit:hover,
+.address-tube .address-tel-unit:focus {
+  color: var(--accent-color);
+}

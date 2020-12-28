@@ -2,16 +2,13 @@
 @import "./base/common";
 @import "./base/container";
 
-// UTILS
-@import "./utils/visually-hidden";
-@import "./utils/variables";
-
 // COMPONENTS
+@import "./components/logo";
 @import "./components/modal-btn";
-@import "./components/backdrop";
+@import "./components/social-list";
+@import "./components/social-web";
 @import "./components/modal-btn-send";
-@import "./components/modal-form";
-@import "./components/modal-form-btn";
+@import "./components/backdrop";
 
 // LAYOUT
 @import "./layout/header";
@@ -19,7 +16,11 @@
 @import "./layout/features";
 @import "./layout/duties";
 @import "./layout/crew";
-@import "./layout/customer";
-@import "./layout/social-web";
+@import "./layout/customers";
 @import "./layout/footer";
 @import "./layout/email-sub";
+@import "./layout/modal-form";
+
+// UTILS
+@import "./utils/visually-hidden";
+@import "./utils/variables";

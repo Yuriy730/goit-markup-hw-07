@@ -2,15 +2,18 @@
 @import "./base/common";
 @import "./base/container";
 
-// UTILS
-@import "./utils/visually-hidden";
-@import "./utils/variables";
-
 // COMPONENTS
-@import "./components/service-button";
+@import "./components/logo";
+@import "./components/social-web";
+@import "./components/modal-btn-send";
 
 // LAYOUT
 @import "./layout/header";
-@import "./layout/portfolio-service";
-@import "./layout/portfolio-project";
+@import "./layout/service";
+@import "./layout/cards-set";
 @import "./layout/footer";
+@import "./layout/email-sub";
+
+// UTILS
+@import "./utils/visually-hidden";
+@import "./utils/variables";
