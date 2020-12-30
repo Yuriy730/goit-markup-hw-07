@@ -1,3 +1,7 @@
+// UTILS
+@import "./utils/variables";
+@import "./utils/visually-hidden";
+
 // BASE
 @import "./base/common";
 @import "./base/container";
@@ -6,6 +10,7 @@
 @import "./components/logo";
 @import "./components/social-web";
 @import "./components/modal-btn-send";
+@import "./components/modal-form-btn";
 
 // LAYOUT
 @import "./layout/header";
@@ -13,7 +18,3 @@
 @import "./layout/cards-set";
 @import "./layout/footer";
 @import "./layout/email-sub";
-
-// UTILS
-@import "./utils/visually-hidden";
-@import "./utils/variables";

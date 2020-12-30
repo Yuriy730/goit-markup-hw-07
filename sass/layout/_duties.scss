@@ -1,21 +1,19 @@
 .section-duties {
   padding-bottom: 94px;
+
+  &-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.166;
+    letter-spacing: 0.03em;
+    color: $title-text-color;
+  }
 }
-.section-duties-title {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.166;
-  letter-spacing: 0.03em;
-  color: var(--title-text-color);
-}
-.container-duties {
-  display: flex;
-  justify-content: space-between;
-}
+
 .duties-element {
   position: relative;
 }
@@ -40,5 +38,5 @@
   text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--primery-white-color);
+  color: $primery-white-color;
 }

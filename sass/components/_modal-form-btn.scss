@@ -1,10 +1,8 @@
-.modal-btn-send {
-  display: inline-flex;
-  align-items: center;
-
+.modal-form-btn {
+  display: block;
   width: 200px;
   border-radius: 4px;
-  padding: 10px 29px;
+  padding: 10px 32px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
@@ -14,11 +12,5 @@
   border: none;
   outline: none;
   cursor: pointer;
-}
-.modal-icon-send {
-  width: 24px;
-  height: 24px;
-
-  margin-left: 12px;
-  fill: rgba(255, 255, 255, 0.9);
+  margin: 0 auto;
 }

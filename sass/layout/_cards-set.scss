@@ -14,14 +14,15 @@
   margin-left: 26px;
   margin-top: 26px;
   border: 1px solid #ececec;
-  transition: 250ms var(--timing-function);
-}
-.project > .project-list:hover,
-.project > .project-list:focus {
-  border: 1px solid #eeeeee;
-  box-sizing: border-box;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    border: 1px solid #eeeeee;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
 }
 
 .project-title {
@@ -30,7 +31,7 @@
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  color: var(--title-text-color);
+  color: $title-text-color;
 }
 
 .project-text {
@@ -43,7 +44,7 @@
 }
 .text-box {
   padding: 30px 24px;
-  color: var(--primery-text-color);
+  color: $primery-text-color;
 }
 .project-img-wrapper {
   position: relative;
@@ -62,11 +63,12 @@
   line-height: 1.555;
   letter-spacing: 0.03em;
   background-color: rgba(33, 150, 243, 0.9);
-  color: var(--primery-white-color);
+  color: $primery-white-color;
   transform: translateY(100%);
-  transition: all 250ms var(--timing-function);
-}
-.project-list-link:hover .overlay,
-.project-list-link:focus .overlay {
-  transform: translateY(0%);
+  transition: all 250ms $timing-function;
+
+  .project-list-link:hover &,
+  .project-list-link:focus & {
+    transform: translateY(0%);
+  }
 }

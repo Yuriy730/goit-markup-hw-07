@@ -6,7 +6,7 @@
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--title-text-color);
+  color: $title-text-color;
   margin-bottom: 12px;
 }
 .modal-form {
@@ -36,15 +36,14 @@
   border-radius: 4px;
   padding-left: 42px;
   outline: none;
-  transition: 250ms var(--timing-function);
+  transition: 250ms $timing-function;
+
+  &:focus {
+    border: 1px solid $accent-color;
+    cursor: pointer;
+  }
 }
-.modal-form-input:focus {
-  border: 1px solid var(--accent-color);
-  cursor: pointer;
-}
-.modal-form-input:focus + .modal-form-icon {
-  fill: var(--accent-color);
-}
+
 .modal-form-icon {
   position: absolute;
   display: block;
@@ -53,8 +52,13 @@
   left: 12px;
   width: 18px;
   height: 18px;
-  transition: 250ms var(--timing-function);
+  transition: 250ms $timing-function;
+
+  .modal-form-input:focus + & {
+    fill: $accent-color;
+  }
 }
+
 .modal-form-fillup {
   height: 138px;
   margin-bottom: 20px;
@@ -73,14 +77,17 @@
   border-radius: 4px;
   outline: none;
   resize: none;
-  transition: 250ms var(--timing-function);
+  transition: 250ms $timing-function;
+
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
 }
-.modal-form-message:focus {
-  border: 1px solid var(--accent-color);
-}
-.modal-form-message::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
+
 .user-agreement {
   display: flex;
   justify-content: center;
@@ -88,22 +95,10 @@
   margin-bottom: 30px;
 }
 .subject-agreement {
-  color: var(--accent-color);
+  color: $accent-color;
   margin-left: 6px;
 }
 
-.user-policy:checked + .policy-agreement::before {
-  background-image: url(../images/images-hw-04/icon-check.png);
-  border: transparent;
-}
-.policy-agreement::before {
-  content: "";
-  width: 16px;
-  height: 15px;
-  border: 2px solid var(--title-text-color);
-  margin-right: 7px;
-  border-radius: 2px;
-}
 .policy-agreement {
   display: flex;
   align-items: center;
@@ -112,20 +107,18 @@
   font-size: 14px;
   line-height: 1.714px;
   letter-spacing: 0.03em;
-}
-.modal-form-btn {
-  display: block;
-  width: 200px;
-  border-radius: 4px;
-  padding: 10px 32px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.875;
-  letter-spacing: 0.06em;
-  color: var(--primery-white-color);
-  background-color: var(--accent-color);
-  border: none;
-  outline: none;
-  cursor: pointer;
-  margin: 0 auto;
+
+  &::before {
+    content: "";
+    width: 16px;
+    height: 15px;
+    border: 2px solid $title-text-color;
+    margin-right: 7px;
+    border-radius: 2px;
+  }
+
+  .user-policy:checked + &::before {
+    background-image: url(../images/images-hw-04/icon-check.png);
+    border: transparent;
+  }
 }

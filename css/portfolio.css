@@ -1,6 +1,19 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .body {
   font-family: "Roboto", sans-serif;
-  color: var(--primery-text-color);
+  color: #757575;
 }
 
 h1,
@@ -33,8 +46,22 @@ img {
   padding: 0 15px;
 }
 
+.container .rubric {
+  display: flex;
+  align-items: center;
+}
+
+.container-duties {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-tube {
+  margin-right: 70px;
+}
+
 .logo-accent {
-  color: var(--accent-color);
+  color: #2196f3;
 }
 
 .logo {
@@ -51,7 +78,7 @@ img {
 .slogan-web {
   display: flex;
   margin-bottom: 20px;
-  color: var(--primery-white-color);
+  color: #ffffff;
 }
 
 .social-web-list {
@@ -70,18 +97,12 @@ img {
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  transition: 250ms var(--timing-function);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-web-list-link:hover,
-.social-web-list-link:focus {
-  background-color: var(--accent-color);
-  transition: 250ms var(--timing-function);
-}
-
-.social-web-list-link:hover > .social-list-icon,
-.social-web-list-link:focus > .social-list-icon {
-  fill: var(--primery-white-color);
+.social-web-list-link:hover, .social-web-list-link:focus {
+  background-color: #2196f3;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-web-list-icon {
@@ -89,6 +110,11 @@ img {
   width: 20px;
   height: 20px;
   fill: rgba(255, 255, 255, 0.9);
+}
+
+.social-web-list-link:hover > .social-web-list-icon,
+.social-web-list-link:focus > .social-web-list-icon {
+  fill: #ffffff;
 }
 
 .modal-btn-send {
@@ -101,8 +127,8 @@ img {
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.06em;
-  color: var(--primery-white-color);
-  background-color: var(--accent-color);
+  color: #ffffff;
+  background-color: #2196f3;
   border: none;
   outline: none;
   cursor: pointer;
@@ -115,14 +141,26 @@ img {
   fill: rgba(255, 255, 255, 0.9);
 }
 
+.modal-form-btn {
+  display: block;
+  width: 200px;
+  border-radius: 4px;
+  padding: 10px 32px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background-color: #2196f3;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
 .header {
   padding: 25px 0;
   border-bottom: 1px solid #ececec;
-}
-
-.rubric {
-  display: flex;
-  align-items: center;
 }
 
 .navigation {
@@ -144,27 +182,18 @@ img {
   line-height: 1.143;
   letter-spacing: 0.02em;
   font-weight: 500;
-  color: var(--title-text-color);
+  color: #212121;
   padding-bottom: auto;
-  transition: 250ms var(--timing-function);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
 }
 
-.navigation .navigation-list-link.current {
-  color: var(--accent-color);
+.navigation-list-link:hover, .navigation-list-link:focus {
+  color: #2196f3;
 }
 
-.navigation-list-link:hover,
-.navigation-list-link:focus {
-  color: var(--accent-color);
-}
-
-.current::after {
-  position: absolute;
-  content: "";
-  height: 4px;
-  width: 100%;
-  color: var(--accent-color);
+.navigation-list-link.current {
+  color: #2196f3;
 }
 
 .navigation-list-link::after {
@@ -175,7 +204,8 @@ img {
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  background-color: var(--accent-color);
+  color: #2196f3;
+  background-color: #2196f3;
   opacity: 0;
 }
 
@@ -187,13 +217,13 @@ img {
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  background-color: var(--accent-color);
+  background-color: #2196f3;
   opacity: 1;
 }
 
 .navigation-list-link:hover::after {
   opacity: 1;
-  transition: opacity 250ms var(--timing-function);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address {
@@ -210,7 +240,7 @@ img {
 }
 
 .address-list {
-  fill: var(--primery-text-color);
+  fill: #757575;
 }
 
 .address-cont .address-mail {
@@ -222,15 +252,14 @@ img {
   line-height: 1.143;
   letter-spacing: 0.02em;
   margin-left: 305px;
-  color: var(--primery-text-color);
-  transition: 250ms var(--timing-function);
+  color: #757575;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
 }
 
-.address-cont .address-mail:hover,
-.address-cont .address-mail:focus {
-  color: var(--accent-color);
-  fill: var(--accent-color);
+.address-cont .address-mail:hover, .address-cont .address-mail:focus {
+  color: #2196f3;
+  fill: #2196f3;
 }
 
 .address-mail > .icon-envelope,
@@ -248,15 +277,14 @@ img {
   line-height: 1.143;
   letter-spacing: 0.02em;
   font-weight: 500;
-  color: var(--primery-text-color);
-  transition: 250ms var(--timing-function);
+  color: #757575;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
 }
 
-.address-cont .address-tel:hover,
-.address-cont .address-tel:focus {
-  color: var(--accent-color);
-  fill: var(--accent-color);
+.address-cont .address-tel:hover, .address-cont .address-tel:focus {
+  color: #2196f3;
+  fill: #2196f3;
 }
 
 .service {
@@ -284,19 +312,19 @@ img {
   font-size: 16px;
   line-height: 1.625;
   letter-spacing: 0.03em;
-  color: var(--title-text-color);
+  color: #212121;
   background: #f5f4fa;
   border: none;
   cursor: pointer;
   border-radius: 4px;
   transform: rotate(-0.72deg);
-  transition: 250ms var(--timing-function);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.service .button-item:hover,
-.service .button-item:focus {
-  color: var(--primery-white-color);
-  background-color: var(--accent-color);
+.service .service-list .button-item:hover,
+.service .service-list .button-item:focus {
+  color: #ffffff;
+  background-color: #2196f3;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
@@ -318,11 +346,10 @@ img {
   margin-left: 26px;
   margin-top: 26px;
   border: 1px solid #ececec;
-  transition: 250ms var(--timing-function);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project > .project-list:hover,
-.project > .project-list:focus {
+.project > .project-list:hover, .project > .project-list:focus {
   border: 1px solid #eeeeee;
   box-sizing: border-box;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -334,7 +361,7 @@ img {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  color: var(--title-text-color);
+  color: #212121;
 }
 
 .project-text {
@@ -348,7 +375,7 @@ img {
 
 .text-box {
   padding: 30px 24px;
-  color: var(--primery-text-color);
+  color: #757575;
 }
 
 .project-img-wrapper {
@@ -369,9 +396,9 @@ img {
   line-height: 1.555;
   letter-spacing: 0.03em;
   background-color: rgba(33, 150, 243, 0.9);
-  color: var(--primery-white-color);
+  color: #ffffff;
   transform: translateY(100%);
-  transition: all 250ms var(--timing-function);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-list-link:hover .overlay,
@@ -382,21 +409,13 @@ img {
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
-  background-color: var(--primery-background-color);
+  background-color: #2f303a;
 }
 
 .tube {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-}
-
-.container-tube {
-  margin-right: 70px;
-}
-
-.address-tube {
-  margin-top: 20px;
 }
 
 .tube .logo-tube {
@@ -406,13 +425,12 @@ img {
   font-size: 26px;
   line-height: 1.192;
   letter-spacing: 0.03em;
-  color: var(--primery-white-color);
+  color: #ffffff;
   text-decoration: none;
 }
 
-.address-mail-item {
-  margin-bottom: 9px;
-  color: var(--primery-white-color);
+.address-tube {
+  margin-top: 20px;
 }
 
 .address-tube .location {
@@ -422,7 +440,12 @@ img {
   letter-spacing: 0.03em;
   margin-bottom: 9px;
   font-weight: 400;
-  color: var(--primery-white-color);
+  color: #ffffff;
+}
+
+.address-mail-item {
+  margin-bottom: 9px;
+  color: #ffffff;
 }
 
 .address-tube .address-tel-unit,
@@ -433,18 +456,20 @@ img {
   line-height: 1.143px;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
-  transition: 250ms var(--timing-function);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
 }
 
-.address-tube .address-mail-unit:hover,
-.address-tube .address-mail-unit:focus {
-  color: var(--accent-color);
+.address-tube .address-tel-unit.address-mail-unit:hover, .address-tube .address-tel-unit.address-mail-unit:focus,
+.address-tube .address-mail-unit.address-mail-unit:hover,
+.address-tube .address-mail-unit.address-mail-unit:focus {
+  color: #2196f3;
 }
 
-.address-tube .address-tel-unit:hover,
-.address-tube .address-tel-unit:focus {
-  color: var(--accent-color);
+.address-tube .address-tel-unit.address-tel-unit:hover, .address-tube .address-tel-unit.address-tel-unit:focus,
+.address-tube .address-mail-unit.address-tel-unit:hover,
+.address-tube .address-mail-unit.address-tel-unit:focus {
+  color: #2196f3;
 }
 
 .email-subscription {
@@ -464,7 +489,7 @@ img {
   box-sizing: border-box;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  background-color: var(--primery-background-color);
+  background-color: #2f303a;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 
@@ -484,37 +509,13 @@ img {
   border: none;
   outline: none;
   color: rgba(255, 255, 255, 0.6);
-  background-color: var(--primery-background-color);
+  background-color: #2f303a;
 }
 
 .form-input::placeholder {
   font-weight: 400;
   font-size: 16px;
   color: rgba(255, 255, 255, 0.6);
-  background-color: var(--primery-background-color);
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-:root {
-  --primery-text-color: #757575;
-  --title-text-color: #212121;
-  --accent-color: #2196f3;
-  --primery-white-color: #ffffff;
-  --primery-grey-color: #afb1b8;
-  --primery-background-color: #2f303a;
-  --secondary-background-color: #f5f4fa;
-  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #2f303a;
 }
 /*# sourceMappingURL=portfolio.css.map */
